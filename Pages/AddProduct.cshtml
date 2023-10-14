@@ -1,0 +1,46 @@
+﻿@page
+@model ClothingStore.Pages.AddProductModel
+@{
+}
+<form method="post">
+    <div class="border p-3 mt-4 ">
+            <div class="row pb-2">
+                <h2 class="text-dark pl-3 ">Create Product</h2>
+                <hr />
+
+                <div class="form-group">
+                <label asp-for="InputProduct">ProductName</label>
+                    <input asp-for="InputProduct.ProductName" class="form-control" id="AddProductName">
+                    <span asp-validation-for="InputProduct.ProductName" style="color:darkred"></span>
+                </div>
+
+                <div class="form-group">
+                <label asp-for="InputProduct">Description</label>
+                    <input asp-for="InputProduct.Description" class="form-control" id="AddDescription">
+                    <span asp-validation-for="InputProduct.Description" style="color:darkred"></span>
+                </div>
+     
+                    <select class="custom-select w-25" id="CategorySelect">
+                      
+                        <option value="1">Clothes</option>
+                        <option value="2">Shoes</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+            <label asp-for="InputProduct">Price</label>
+                <input asp-for="InputProduct.Price" class="form-control" id="AddPrice">
+                <span asp-validation-for="InputProduct.Price" style="color:darkred"></span>
+            </div>
+            <div class="form-group">
+            <label asp-for="InputProduct">ImgPath</label>
+                <input asp-for="InputProduct.ImgPath" class="form-control" id="AddImgPath">
+                <span asp-validation-for="InputProduct.ImgPath" style="color:darkred"></span>
+            </div>
+
+      
+
+       
+        <button type="submit" class="btn btn-secondary w-25">Commit</button>
+    </div>
+</form>
