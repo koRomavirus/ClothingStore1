@@ -44,6 +44,10 @@ namespace ClothingStore.Pages
                   Description=InputProduct.Description,
                   Category =InputProduct.Category,
                   Price = InputProduct.Price,
+                  ImgPath =InputProduct.ImgPath,
+                  Provider = InputProduct.Provider,
+                  Manufacturer =InputProduct.Manufacturer,
+
             };
 
 

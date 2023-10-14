@@ -7,6 +7,12 @@ namespace ClothingStore.Services
     {
             
         private readonly ApplicationDbContext _context;
+
+        public ProductService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         public void AddProduct(Product newProduct)
         {
            _context.Products.Add(newProduct);

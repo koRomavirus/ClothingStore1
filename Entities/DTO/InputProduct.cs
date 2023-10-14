@@ -24,6 +24,10 @@ namespace ClothingStore.Entities.DTO
         [Display(Name = "ImgPath")]
         public string ImgPath{ get; set; }
 
+        [Display(Name = "Provider Name")]
+        public Provider Provider{ get; set; }
 
+        [Display(Name = "Manufacturer Name")]
+        public Manufacturer Manufacturer{ get; set; }
     }
 }

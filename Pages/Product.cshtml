@@ -3,25 +3,51 @@
 @{
 }
 
-<div class="card shadow mb-2 " style=" background-color:#D7D6D6;">
- 
+<div class="col">
+    <a class="btn-success mb-2 " style="background-color:cadetblue; color:white" asp-page="AddProduct">Add Product</a>
+</div>
+
+@*<div class="card shadow mb-2 " style=" background-color:#D7D6D6;">
+ @foreach( var item in Model.ProductList)
+{
         <div class="card shadow text-dark bg-light m-3 " style="">
 
             <div class="card-body border rounded-3" style="background-color:#ACACAC;  position-relative;">
                 <div>
 
                     <div style="display:flex; font-size: 26px; border-bottom: 0.1px solid gray">
-                        <p class="ms-1">ProductName</p>
-                        <p class="ms-2">Description</p>
-                        <p class="ms-2">Price</p>
-                   
-                       
+                        <p class="ms-1">ff</p>
+                        <p class="ms-2">DesdWADAWDAWDAWDWDcription</p>
+                        <p class="ms-2">55</p>
+
+
                     </div>
 
-                   
+
 
                 </div>
             </div>
         </div>
+}
+
+     
  
 </div>
+*@
+
+@foreach(var item in Model.ProductList)
+{
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@item.ProductName</h5>
+            <p class="card-text">@item.Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">@item.Category</li>
+            <li class="list-group-item">@item.Price</li>
+            <li class="list-group-item">@item.Manufacturer</li>
+        </ul>
+
+    </div>
+}
