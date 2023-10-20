@@ -19,12 +19,14 @@
                     <input asp-for="InputProduct.Description" class="form-control" id="AddDescription">
                     <span asp-validation-for="InputProduct.Description" style="color:darkred"></span>
                 </div>
-     
-                    <select class="custom-select w-25" id="CategorySelect">
-                      
-                        <option value="1">Clothes</option>
-                        <option value="2">Shoes</option>
-                    </select>
+                    
+                
+                <div class="form-group">
+                <label asp-for="InputProduct">Category</label>
+                    <input asp-for="InputProduct.Category" class="form-control" id="AddCategory">
+                    <span asp-validation-for="InputProduct.Category" style="color:darkred"></span>
+                </div>
+                 
             </div>
 
             <div class="form-group">
@@ -32,11 +34,26 @@
                 <input asp-for="InputProduct.Price" class="form-control" id="AddPrice">
                 <span asp-validation-for="InputProduct.Price" style="color:darkred"></span>
             </div>
+
+
             <div class="form-group">
             <label asp-for="InputProduct">ImgPath</label>
                 <input asp-for="InputProduct.ImgPath" class="form-control" id="AddImgPath">
                 <span asp-validation-for="InputProduct.ImgPath" style="color:darkred"></span>
             </div>
+
+
+    @*        <div class="form-group">
+                <label asp-for="InputProduct">Manufacturer</label>
+            <input asp-for="InputProduct.Manufacturer" class="form-control" id="AddManufacturer">
+            <span asp-validation-for="InputProduct.Manufacturer" style="color:darkred"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="InputProduct">Provider</label>
+            <input asp-for="InputProduct.Provider" class="form-control" id="AddProvider">
+            <span asp-validation-for="InputProduct.Provider" style="color:darkred"></span>
+            </div>*@
 
       
 

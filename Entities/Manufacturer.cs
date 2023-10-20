@@ -9,7 +9,7 @@ namespace ClothingStore.Entities
         public bool IsDeleted { get; set; }
 
         public string Name { get; set; }
-       
+
         public ICollection<Product> Products { get; set; }
     }
 }
