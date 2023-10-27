@@ -20,8 +20,8 @@ namespace ClothingStore.Data
         }
 
         public DbSet<Product> Products { get; set; }
-        public DbSet<Manufacturer> Manufacturers { get; set; }
-        public DbSet<Provider> Providers { get; set; }
+        //public DbSet<Manufacturer> Manufacturers { get; set; }
+        //public DbSet<Provider> Providers { get; set; }
         public DbSet<Employee> Employees{ get; set; }
         public DbSet<ProductSale> ProductSales{ get; set; }
         public DbSet<Client> Clients{ get; set; }

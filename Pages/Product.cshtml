@@ -3,51 +3,64 @@
 @{
 }
 
-<div class="col">
-    <a class="btn-success mb-2 " style="background-color:cadetblue; color:white" asp-page="AddProduct">Add Product</a>
-</div>
+<div class="d-flex row  ">
+    <div class="col">
+        <a class="btn mb-2 " style="background-color:cadetblue; color:white" asp-page="AddProduct">Добавить продукцию</a>
+    </div>
 
-@*<div class="card shadow mb-2 " style=" background-color:#D7D6D6;">
- @foreach( var item in Model.ProductList)
-{
-        <div class="card shadow text-dark bg-light m-3 " style="">
-
-            <div class="card-body border rounded-3" style="background-color:#ACACAC;  position-relative;">
-                <div>
-
-                    <div style="display:flex; font-size: 26px; border-bottom: 0.1px solid gray">
-                        <p class="ms-1">ff</p>
-                        <p class="ms-2">DesdWADAWDAWDAWDWDcription</p>
-                        <p class="ms-2">55</p>
-
-
-                    </div>
-
-
-
+    <div class="col ">
+        <form asp-page-handler="SerchEmployee">
+            <div class="input-group mb-3 m">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-secondary w-100 ms-2" >Найти</button>
                 </div>
             </div>
-        </div>
-}
-
-     
- 
-</div>
-*@
-
-@foreach(var item in Model.ProductList)
-{
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">@item.ProductName</h5>
-            <p class="card-text">@item.Description</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">@item.Category</li>
-            <li class="list-group-item">@item.Price</li>
-            <li class="list-group-item">@item.Manufacturer</li>
-        </ul>
-
+        </form>
     </div>
-}
+
+    <div class="col position-relative">
+        <form asp-page-handler="SortEmployee">
+            <select class="form-select form-select-lg w-50 h-75  fs-6"  style="margin-left:50%">
+                <option selected value="1">Cancel sort</option>
+                <option value="2">По названию</option>
+                <option value="3">По категории</option>
+                <option value="4">По цене</option>
+            </select>
+           
+            <button type="submit" class="btn btn-secondary" style="position:absolute; top:0">Сортировка</button>
+        </form>
+    </div>
+</div>
+
+
+ 
+
+
+<div style="display:flex">
+    @foreach (var item in Model.ProductList)
+    {
+        <div class="card" style="width: 18rem; margin-top:5%; margin:2%; background-color:#dbdbdb">
+            <img class="card-img-top" src="@item.ImgPath" alt="">
+            <div class="card-body">
+                <h5 class="card-title">@item.ProductName</h5>
+                <p class="card-text">@item.Description</p>
+            </div>
+            <ul class="list-group list-group-flush" style="background-color:#D5D5D5">
+                <li class="list-group-item">Категория: @item.Category</li>
+                <li class="list-group-item">Стоимость: @item.Price</li>
+               @* <li class="list-group-item">Производитель: @item.ManufacturerId</li>*@
+            </ul>
+
+            <div class="card-body">
+                <button type="button" class="btn btn-success" style="" >Редактировать</button>
+                <button type="button" class="btn btn-danger" style="">Удалить</button>
+            </div>
+
+
+
+           
+        </div>
+    }
+</div>
+        

@@ -17,7 +17,7 @@ namespace ClothingStore
             builder.Services.AddScoped<ApplicationDbContext, ApplicationDbContext>();
             builder.Services.AddScoped<IProductService , ProductService>();
             builder.Services.AddScoped<IProviderService, ProviderService>();
-            builder.Services.AddScoped<IManufacturerService, ManufacturerService>();
+            //builder.Services.AddScoped<IManufacturerService, ManufacturerService>();
 
 
 

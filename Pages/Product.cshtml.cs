@@ -10,13 +10,13 @@ namespace ClothingStore.Pages
     {
         private readonly IProductService _productService;
         private readonly IProviderService _providerService;
-        private readonly IManufacturerService _manufacturerService;
+        //private readonly IManufacturerService _manufacturerService;
 
-        public ProductModel(IProductService productService, IProviderService providerService, IManufacturerService manufacturerService)
+        public ProductModel(IProductService productService, IProviderService providerService /*IManufacturerService manufacturerService*/)
         {
             _productService = productService;
             _providerService = providerService;
-            _manufacturerService = manufacturerService;
+            //_manufacturerService = manufacturerService;
         }
 
         [BindProperty]

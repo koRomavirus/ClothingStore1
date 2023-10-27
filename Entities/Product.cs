@@ -14,11 +14,11 @@ namespace ClothingStore.Entities
         public decimal Price  { get; set; }
         public string ImgPath { get; set; }
 
-        public Provider Provider { get; set; }
-        public int ProviderId { get; set; }
+        //public Provider Provider { get; set; }
+        //public int ProviderId { get; set; }
 
-        public Manufacturer Manufacturer { get; set; }
-        public int ManufacturerId { get; set; }
+        //public Manufacturer Manufacturer { get; set; }
+        //public int ManufacturerId { get; set; }
 
         public ICollection<ProductSale> ProductSales { get; set; }
     }
